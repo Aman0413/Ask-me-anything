@@ -1,0 +1,107 @@
+.App{
+   background-color: antiquewhite;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   .container{
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 20px;
+     padding-block: 30px;
+     padding-inline: 20px;
+
+      width: 50%;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+     
+
+      .search-box{
+        
+         width: 98%;
+         height: 15%;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        input{
+         width: 80%;
+         padding: 15px;
+         border-radius: 5px;
+         border: 1px solid gray;
+
+         &::placeholder{
+            font-size: large;
+         }
+        }
+       input[type="text"] {
+                 font-size: 18px;
+              }
+        button{
+         width:120px;
+      
+         padding-block: 15px;
+         font-size: large;
+         font-weight: bold;
+         border: none;
+         border-radius: 5px;
+         background-color: rgb(2, 183, 255);
+         color: white;
+         transition: all ease-in-out 0.3s;
+
+         &:hover{
+            scale: (1);
+         }
+         &:active{
+            scale: (0.9);
+         }
+        }
+      }
+
+      .output{
+         background-color:rgb(250, 250, 243);
+         border-radius: 10px;    
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         width: 98%;
+         height: 80%;
+         display: flex;
+         
+
+         .value{
+            padding-inline: 20px;
+            padding-block: 20px;
+            font-size: large;
+
+         }
+         
+        
+      }
+
+      .copyright{
+        
+        padding-block: 5px;
+         width: 100%;
+         height: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size:0.8rem;
+      }
+   }
+
+   @media screen and (max-width:767px){
+
+      .container{
+         width: 100%;
+         height: 100%;
+      }
+      
+   }
+}
