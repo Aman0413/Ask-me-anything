@@ -23,13 +23,16 @@ function App() {
   };
 
   async function fetchData(term) {
-    const result = await client.post(
-      "https://api.openai.com/v1/completions",
-      term
-    );
+    try {
+      const result = await client.post(
+        "https://api.openai.com/v1/completions",
+        term
+      );
 
-    console.log(result.data.choices[0].text);
-    setValue(result.data.choices[0].text);
+      setValue(result.data.choices[0].text);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
