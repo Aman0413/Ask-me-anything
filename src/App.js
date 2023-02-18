@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 
 function App() {
-  const apiKey = "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";
+  const apiKey = "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";
 
   const [searchTerm, setsearchTerm] = useState(" ");
   const [value, setValue] = useState("");
