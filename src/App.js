@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 
 function App() {
-  const apiKey = "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";
+  const apiKey = "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";
 
   const [searchTerm, setsearchTerm] = useState(" ");
   const [value, setValue] = useState("");
@@ -22,17 +22,13 @@ function App() {
     temperature: 0,
   };
 
-  async function fetchData(term) {
-    try {
-      const result = await client.post(
-        "https://api.openai.com/v1/completions",
-        term
-      );
+  async function fetchData(key) {
+    const result = await client.post(
+      "https://api.openai.com/v1/completions",
+      key
+    );
 
-      setValue(result.data.choices[0].text);
-    } catch (error) {
-      console.log(error);
-    }
+    setValue(result.data.choices[0].text);
   }
 
   return (
@@ -41,7 +37,7 @@ function App() {
         <div className="search-box">
           <input
             type="text"
-            placeholder="Ask me anything ? "
+            placeholder="Ask me anything ?"
             onChange={(e) => {
               setsearchTerm(e.target.value);
             }}
@@ -68,11 +64,8 @@ function App() {
         </div>
         <div className="copyright">
           <p>
-            {/* {" "} */}
-            <p>
-              Copyright © {new Date().getFullYear()} All rights reserved | Made
-              by Aman{" "}
-            </p>
+            Copyright © {new Date().getFullYear()} All rights reserved | Made by
+            Aman{" "}
           </p>
         </div>
       </div>
